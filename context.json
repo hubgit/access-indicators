@@ -1,0 +1,9 @@
+"@context": {
+    "@vocab": "http://www.niso.org/schemas/ali/1.0/",
+    "startDate": { 
+        "@type": "http://www.w3.org/2001/XMLSchema#date" 
+    },
+    "endDate": { 
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+    }
+}
