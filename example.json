@@ -6,19 +6,22 @@
         },
         "endDate": { 
             "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "license": {
+       	    "@type": "@id"
         }
     },
     "freeToRead": {
-	    "startDate": "2014-04-04"
+	    "start": "2014-04-04T00:00:00Z"
     },
     "licensePeriod": [
     	{
     	    "license": "http://creativecommons.org/licenses/by/3.0/",
-    	    "startDate": "2014-04-04"
+    	    "startDate": "2014-04-04T00:00:00Z"
     	},
     	{
     	    "license": "http://creativecommons.org/licenses/by/4.0/",
-    	    "startDate": "2015-04-04"
+    	    "startDate": "2015-04-04T00:00:00Z"
     	}
     ]
 }
