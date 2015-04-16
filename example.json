@@ -11,13 +11,13 @@
     "freeToRead": {
 	    "startDate": "2014-04-04"
     },
-    "license": [
+    "licensePeriod": [
     	{
-    	    "@id": "http://creativecommons.org/licenses/by/3.0/",
+    	    "license": "http://creativecommons.org/licenses/by/3.0/",
     	    "startDate": "2014-04-04"
     	},
     	{
-    	    "@id": "http://creativecommons.org/licenses/by/4.0/",
+    	    "license": "http://creativecommons.org/licenses/by/4.0/",
     	    "startDate": "2015-04-04"
     	}
     ]
