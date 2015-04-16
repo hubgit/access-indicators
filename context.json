@@ -6,6 +6,9 @@
         },
         "endDate": { 
             "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "license": {
+            "@type": "@id"
         }
     }
 }
