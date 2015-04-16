@@ -8,6 +8,8 @@ Many research funding organisations have mandated that journal articles resultin
 
 This information would allow services to query CrossRef and retrieve only those articles which are free to read and/or have a specific license.
 
+There are other use cases listed in the Recommended Practice document. Strangely, the acknowledgements section mentions "Members of the NISO oa-indicators-info interest list, who provided significant input to the development of the use cases listed in Section 5.", but there's no record of that discussion in [the public mailing list archive](http://www.niso.org/lists/oa-indicators-info/archive).
+
 ## XML
 
 The proposal of the NISO Working Group for the new XML elements are these:
@@ -57,7 +59,7 @@ As well as the XML schema, the working group has also produced [a JSON-LD contex
 * The file has no “Access-Control-Allow-Origin: *” header, so it can’t be fetched automatically into [a client-side JSON-LD processor](http://json-ld.org/playground/)
 * The `@vocab` URL should be “http://www.niso.org/schemas/ali/1.0/”, not “http://www.niso.org/schemas/ali/1.0/jsonld.json”.
 * The `@type` attribute of several of the properties is wrong: a value of `@id` says that the value is a string value that represents an IRI, which these aren't.
-* The underscored property names would be better as camelCase.
+* The underscored property names [would be better as camelCase](https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml#Property_Name_Format).
 * The “uri” property should either be an “@id” property (which is a URI) or something more meaningful.
 * The type of the `free_to_read` property can’t be defined, because it can be either null (in XML), “true” (in JSON-LD), or an object with “start_date” and “end_date” properties.
 
@@ -101,4 +103,4 @@ and an example document:
 }
 ```
 
-
+The concept of specifying periods of validity for licenses is a tricky one, complicated by the fact that there isn't an obvious way to apply date limits to the validity of a statement in JSON-LD or RDF. Eric Hellman [has done some work on this](http://go-to-hellman.blogspot.co.uk/2013/07/proposal-dated-creative-commons-license.html), but in way that's human-readable rather than machine-readable. The [schema.org Role type](http://schema.org/Role) has similar aims. I'm not sure what the answer is…
