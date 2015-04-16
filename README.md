@@ -32,7 +32,7 @@ or (with a start ± end date)
 
 ## Problems
 
-* The [schema](http://www.niso.org/schemas/ali/1.0/ali.xsd) specifies that the `start_date` attribute (but not the `end_date` attribute) is required on the `free_to_read` element. However, this is a confusing situation: in some cases `free_to_read` can be an object with `start_date` ± `end_date` (XML), or it can be an empty `<free_to_read/>` element (XML), or it can be a boolean `”free_to_read”: true` value (JSON-LD).
+* The [schema](http://www.niso.org/schemas/ali/1.0/ali.xsd) specifies that the `start_date` attribute (but not the `end_date` attribute) is required on the `free_to_read` element. However, this is a confusing situation: in some cases `free_to_read` can be an object with `start_date` ± `end_date` (XML), or it can be an empty `<free_to_read/>` element (XML), or it can be a boolean `”free_to_read”: true` value (JSON-LD). If there's a default `true` value for an empty `<free_to_read>` element, shouldn't that be specified in the schema?
 * The element names are underscored, fitting CrossRef’s existing XML style. This is fine if they're only being used for submission to CrossRef, but not ideal if they're [being re-used elsewhere](http://jats.nlm.nih.gov/1.1d3/), where hyphenated XML element names are more common.
 * The `start_date` and `end_date` should be full date + time with a timezone, otherwise it’s not clear when they should be applied. Are the dates inclusive, for example?
 * Following common practice elsewhere, the URL would be better in an attribute rather than as the node contents.
